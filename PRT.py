@@ -15,6 +15,7 @@ def G(theta):
 
 # data noise:
 sigma_data = 3
+
 def build_log_likelihood(data_array):
 	"Builds the log_likelihood function given some data"
 	def log_likelihood(theta):

@@ -1,16 +1,23 @@
 # code of Prior Reproduction Test blog post
 
-blog: http://jeremiecoullon.com/
+*blog: http://jeremiecoullon.com/*
+
+Code to reproduce the figures in the PRT blog post. Includes a simple MCMC framework to test (in the `MCMC` module) using PRT.
+
+## Installation
+
+- `virtualenv venv; source venv/bin/activate`
+- `pip install -r requirements.txt`
+- `py.test`: run some unit tests
 
 
-Data is generated from a Gaussian with mean 5 and standard deviation 3. We assume the standard deviation is known and use MCMC to estimate the mean parameter.
+In `PRT.py`, we generated data from a Gaussian with mean 5 and standard deviation 3. We assume the standard deviation is known and use MCMC to estimate the mean parameter.
 
-This reproduces the figures in the blog post.
+
+## Scripts:
 
 - `run_MCMC.py`: generates data and runs MCMC to estimate the mean
 
-- `empirical_CDF.py`: Runs PRT to test the MCMC software and checks that the samples follow a uniform distribution (ie: the prior). Creates the figure with the empirical CDF
+- `empirical_CDF.py`: Runs PRT to test the MCMC software and checks that the samples follow a uniform distribution (ie: the prior). Creates the figure with the empirical CDF of the PRT samples.
 
-- `PRT_compare_data_size.py`: Run PRT for different dataset sizes to compare the effect on the test. Creates the figures with 3 plots of posterior vs prior samples.
-
-- `py.test`: runs some unit tests
+- `PRT_compare_data_size.py`: Run PRT for different dataset sizes to compare the effect on the test. Creates the figure with 3 plots of posterior vs prior samples from PRT.
