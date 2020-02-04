@@ -1,6 +1,6 @@
-# code of Prior Reproduction Test blog post
+# code for Prior Reproduction Test blog post
 
-*blog: http://jeremiecoullon.com/*
+*blog post: https://www.jeremiecoullon.com/2020/02/04/priorreproductiontest/*
 
 Code to reproduce the figures in the PRT blog post. Includes a simple MCMC framework to test (in the `MCMC` module) using PRT.
 
